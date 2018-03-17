@@ -8,7 +8,7 @@ Goal: This project aims to give you a small approach on timed commands and their
 > *Note: cron is recurring, look for a command that is executed only once at a specified time.*
 
 ## How To Run
-To run this program on a macOS system: 
+To run this script on a macOS system: 
 
 1. By default, the **atrun** utility is disabled on macOS. To enable it, run the following command :   
 ```
