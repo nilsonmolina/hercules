@@ -31,14 +31,7 @@ long	sum_unrolled(t_unrolled* list) {
 
 void	del_unrolled(t_unrolled* list)
 {
-	t_unrolled*	tmp;
-
-	while (list)
-	{
-		tmp = list->next;
-		free(list);
-		list = tmp;
-	}
+	(void)list;
 }
 
 int		main(void) {
