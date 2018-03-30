@@ -40,9 +40,9 @@ What Programming Language will your project be in?
 	input := getInput()
 
 	if input == "1" || input == "" {
-		project.language = "c"
+		setCProject(os.Args[1])
 	} else if input == "2" {
-		project.language = "go"
+		setGoProject(os.Args[1])
 	} else {
 		askLanguage()
 	}
@@ -57,9 +57,9 @@ Do you want your remote github libft to be included?
 	input := getInput()
 
 	if input == "1" {
-		project.libft = true
+		project.flags["-libft"] = "true"
 	} else if input == "2" || input == "" {
-		project.libft = false
+		project.flags["-libft"] = "false"
 	} else {
 		askLibft()
 	}
@@ -73,9 +73,9 @@ What author name would you like to use?
 	input := getInput()
 
 	if input == "" {
-		project.author = "nmolina"
+		project.flags["-author"] = "nmolina"
 	} else {
-		project.author = input
+		project.flags["-author"] = input
 	}
 }
 
@@ -87,9 +87,9 @@ Will this be a golang web project?
 	input := getInput()
 
 	if input == "1" {
-		project.web = true
+		project.flags["web"] = "true"
 	} else if input == "2" || input == "" {
-		project.web = false
+		project.flags["web"] = "false"
 	} else {
 		askWeb()
 	}
@@ -100,10 +100,10 @@ func confirm() {
 	fmt.Printf("\nproject:\t%v\n", project.name)
 	fmt.Printf("language:\t%v\n", project.language)
 	if project.language == "c" {
-		fmt.Printf("libft:\t\t%v\n", project.libft)
-		fmt.Printf("author:\t\t%v\n", project.author)
+		fmt.Printf("libft:\t\t%v\n", project.flags["libft"])
+		fmt.Printf("author:\t\t%v\n", project.flags["author"])
 	} else if project.language == "go" {
-		fmt.Printf("web:\t\t%v\n", project.web)
+		fmt.Printf("web:\t\t%v\n", project.flags["web"])
 	}
 	fmt.Println("\nDo you still want to proceed?\n1. Yes\n2. No")
 
