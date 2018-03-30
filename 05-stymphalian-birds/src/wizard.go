@@ -4,6 +4,8 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"os/exec"
+	"runtime"
 )
 
 func startWizard() {
@@ -20,6 +22,7 @@ Tips:
 - Leaving blank choices, will pick the default.
 - At any point, you can exit the wizard by typing 'quit'.`)
 
+	initClear()
 	askLanguage()
 	if project.language == "c" {
 		askLibft()
@@ -33,6 +36,7 @@ Tips:
 }
 
 func askLanguage() {
+	callClear()
 	fmt.Println(`
 What Programming Language will your project be in?
 1. C (default)
@@ -49,6 +53,7 @@ What Programming Language will your project be in?
 }
 
 func askLibft() {
+	callClear()
 	fmt.Println(`
 Do you want your remote github libft to be included?
   - will be downloaded from http://github.com/nilsonmolina/libft.git
@@ -57,15 +62,16 @@ Do you want your remote github libft to be included?
 	input := getInput()
 
 	if input == "1" {
-		project.flags["-libft"] = "true"
+		project.flags["-libft"] = true
 	} else if input == "2" || input == "" {
-		project.flags["-libft"] = "false"
+		project.flags["-libft"] = false
 	} else {
 		askLibft()
 	}
 }
 
 func askAuthor() {
+	callClear()
 	fmt.Println(`
 What author name would you like to use?
  - default: nmolina
@@ -80,30 +86,29 @@ What author name would you like to use?
 }
 
 func askWeb() {
+	callClear()
 	fmt.Println(`
-Will this be a golang web project?
+Would you like your go files to be in a src directory?
 1. Yes
 2. No (default)`)
 	input := getInput()
 
 	if input == "1" {
-		project.flags["web"] = "true"
+		project.flags["-src"] = true
 	} else if input == "2" || input == "" {
-		project.flags["web"] = "false"
+		project.flags["-src"] = false
 	} else {
 		askWeb()
 	}
 }
 
 func confirm() {
+	callClear()
 	fmt.Println("The following are your settings:")
-	fmt.Printf("\nproject:\t%v\n", project.name)
-	fmt.Printf("language:\t%v\n", project.language)
-	if project.language == "c" {
-		fmt.Printf("libft:\t\t%v\n", project.flags["libft"])
-		fmt.Printf("author:\t\t%v\n", project.flags["author"])
-	} else if project.language == "go" {
-		fmt.Printf("web:\t\t%v\n", project.flags["web"])
+	fmt.Printf("\nproject:\n   - %v\n", project.name)
+	fmt.Printf("language:\n   - %v\n", project.language)
+	for k, v := range project.flags {
+		fmt.Printf("%v:\n   - %v\n", k[1:], v)
 	}
 	fmt.Println("\nDo you still want to proceed?\n1. Yes\n2. No")
 
@@ -123,5 +128,45 @@ func getInput() string {
 	if ln == "quit" {
 		os.Exit(0)
 	}
+
 	return ln
+}
+
+type inquiry struct {
+	question string
+	handler  func()
+}
+
+func ask(i inquiry) {
+	callClear()
+	fmt.Println(i.question)
+	i.handler()
+}
+
+var clear map[string]func()
+
+func initClear() {
+	clear = make(map[string]func())
+	clear["linux"] = func() {
+		cmd := exec.Command("clear")
+		cmd.Stdout = os.Stdout
+		cmd.Run()
+	}
+	clear["darwin"] = func() {
+		cmd := exec.Command("clear")
+		cmd.Stdout = os.Stdout
+		cmd.Run()
+	}
+	clear["windows"] = func() {
+		cmd := exec.Command("cmd", "/c", "cls")
+		cmd.Stdout = os.Stdout
+		cmd.Run()
+	}
+}
+
+func callClear() {
+	value, ok := clear[runtime.GOOS] //runtime.GOOS -> linux, windows, darwin etc.
+	if ok {
+		value()
+	}
 }

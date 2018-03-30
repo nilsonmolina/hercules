@@ -27,7 +27,7 @@ OPTIONS and SUB-OPTIONS are NOT mandatory, but providing them
 will skip the automation wizard. 
 
 Options:
-   -lang string		Select the Programming Language of the project. (allowed: c, go)
+   -lang string		Select the Programming Language of the project. (allowed: c, go, html5)
    -help		Show usage information
 
 C Sub-Options:
@@ -35,6 +35,12 @@ C Sub-Options:
    -author string	Define a custom author for the author file (default: nmolina)
 
 Go Sub-Options:
-   -web	bool		Create a Go Web project (default: false)`)
+   -src	bool		Put all go files in a src directory (default: false)`)
 	os.Exit(0)
+}
+
+func handleError(err error) {
+	if err != nil {
+		showUsage()
+	}
 }

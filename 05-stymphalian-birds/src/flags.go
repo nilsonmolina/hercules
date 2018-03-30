@@ -1,39 +1,41 @@
 package main
 
-var project Project
+var project parameters
 
 // Project : project template
-type Project struct {
+type parameters struct {
 	name     string
 	language string
-	flags    map[string]string
+	flags    map[string]interface{}
 }
 
-func setProject(lang string, name string) {
-	if lang == "c" {
+func setProject(language string, name string) {
+	if language == "c" {
 		setCProject(name)
-	} else if lang == "go" {
+	} else if language == "go" {
 		setGoProject(name)
+	} else {
+		showUsage()
 	}
 }
 
 func setCProject(name string) {
-	project = Project{
+	project = parameters{
 		name:     name,
 		language: "c",
-		flags: map[string]string{
-			"-libft":  "false",
+		flags: map[string]interface{}{
+			"-libft":  false,
 			"-author": "nmolina",
 		},
 	}
 }
 
 func setGoProject(name string) {
-	project = Project{
+	project = parameters{
 		name:     name,
 		language: "go",
-		flags: map[string]string{
-			"-web": "false",
+		flags: map[string]interface{}{
+			"-src": false,
 		},
 	}
 }
