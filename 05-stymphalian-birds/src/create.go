@@ -4,13 +4,12 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
-
-	git "gopkg.in/src-d/go-git.v4"
+	"os/exec"
 )
 
 func createProject() {
 	// create project directory
-	handleError(os.Mkdir(project.name, os.ModePerm))
+	handleErrorMessage(os.Mkdir(project.name, os.ModePerm), "directory already exists. Please remove directory and try again.")
 	// cd into project directory
 	handleError(os.Chdir(project.name))
 	// create files depending on language
@@ -33,7 +32,7 @@ func createGoProject() {
 }
 
 func createCProject() {
-	author := fmt.Sprint(project.flags["-author"])
+	author := fmt.Sprintf("%v\n", project.flags["-author"])
 
 	// create root files
 	handleError(ioutil.WriteFile("Makefile", []byte(cMakefile), os.ModePerm))
@@ -53,9 +52,7 @@ func createCProject() {
 }
 
 func gitClone(path string, url string) {
-	_, err = git.PlainClone(path, false, &git.CloneOptions{
-		URL:      url,
-		Progress: os.Stdout,
-	})
-	handleError(err)
+	cmd := exec.Command("git", "clone", url, path)
+	cmd.Stdout = os.Stdout
+	handleError(cmd.Run())
 }

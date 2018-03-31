@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"os"
+	"regexp"
+	"errors"
 
 	"github.com/fatih/color"
 )
@@ -11,6 +13,10 @@ func main() {
 	// confirm user provided input
 	if len(os.Args) < 2 {
 		showUsage()
+	}
+	// check for proper filename
+	if !isAlpha(string(os.Args[1][0])) {
+		handleError(errors.New("Improper project name - first character must be alphanumeric"))
 	}
 	// get parameters from user
 	if len(os.Args) == 2 {
@@ -42,6 +48,7 @@ Go Sub-Options:
 }
 
 var err error
+var isAlpha = regexp.MustCompile(`^[A-Za-z0-9]+$`).MatchString
 
 func handleError(err error) {
 	if err != nil {
