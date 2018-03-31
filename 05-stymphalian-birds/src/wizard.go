@@ -9,20 +9,24 @@ import (
 )
 
 func startWizard() {
+	// set clear commands for different OS's
+	initClear()
 	fmt.Println(`
 --------------------------------------------------------
                   Hercules Labour 05
                    stymphalian-bird
 --------------------------------------------------------
-Welcome to the fly-creator's automation tool wizard!
+Welcome to the hercules automation tool wizard!
 This wizard will walk you through the various options
 to properly build your project structure. 
 
 Tips:
 - Leaving blank choices, will pick the default.
-- At any point, you can exit the wizard by typing 'quit'.`)
+- At any point, you can exit the wizard by typing 'quit'.
 
-	initClear()
+Press 'enter' to continue`)
+	// await for any input
+	getInput()
 	askLanguage()
 	if project.language == "c" {
 		askLibft()
@@ -33,6 +37,7 @@ Tips:
 		os.Exit(1)
 	}
 	confirm()
+	callClear()
 }
 
 func askLanguage() {
@@ -132,16 +137,16 @@ func getInput() string {
 	return ln
 }
 
-type inquiry struct {
-	question string
-	handler  func()
-}
+// type inquiry struct {
+// 	question string
+// 	handler  func()
+// }
 
-func ask(i inquiry) {
-	callClear()
-	fmt.Println(i.question)
-	i.handler()
-}
+// func ask(i inquiry) {
+// 	callClear()
+// 	fmt.Println(i.question)
+// 	i.handler()
+// }
 
 var clear map[string]func()
 

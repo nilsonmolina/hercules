@@ -2,7 +2,6 @@ package main
 
 var project parameters
 
-// Project : project template
 type parameters struct {
 	name     string
 	language string

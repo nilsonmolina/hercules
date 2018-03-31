@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"os"
+
+	"github.com/fatih/color"
 )
 
 func main() {
@@ -39,7 +41,23 @@ Go Sub-Options:
 	os.Exit(0)
 }
 
+var err error
+
 func handleError(err error) {
+	if err != nil {
+		color.Red("error: %v", err)
+		os.Exit(1)
+	}
+}
+
+func handleErrorMessage(err error, message string) {
+	if err != nil {
+		color.Red("error: %v", message)
+		os.Exit(1)
+	}
+}
+
+func handleUsageError(err error) {
 	if err != nil {
 		showUsage()
 	}
