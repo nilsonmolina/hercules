@@ -10,8 +10,14 @@ You are going to have to create a champion and train them! It has to stay "live"
 
 **Start the Corewar** *(up to 4 champions)*
 ```
+./corewar <CHAMPION-01.COR> <CHAMPION-02.COR>...
+```
+
+**Visualize the Corewar**
+```
 ./corewar -n <CHAMPION-01.COR> <CHAMPION-02.COR>...
 ```
+ - **_Note:_** *Can press the `q`, `w`, `e`, or `r` keys to change cycle speed. Press `spacebar` to pause and start the battle.*
 
 **Compile Champion**
 ```
