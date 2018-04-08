@@ -11,7 +11,7 @@ To run this script on a macOS system:
 
 1. Run the script
 ```
-./automate <PROJECT_NAME> <OPTIONS> <SUBOPTIONS>
+./fly-creator <PROJECT_NAME> <OPTIONS> <SUBOPTIONS>
 ```
 
 **_*Note:_** *To run this script on another OS, you will need to cross-compile the files in src.*
