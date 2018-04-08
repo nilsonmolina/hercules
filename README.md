@@ -7,19 +7,19 @@ I will put some information here
 ## Labour 01 - Lernaean Hydra
 **_- Did not participate_**
 
-## Labour 02 - Ceryneian Hind
+## [Labour 02 - Ceryneian Hind](02-ceryneian-hind)
 **Goal**  
 *Using the 42 API and any language you want, write a program to find the location of other users in the lab at 42US.*
 
-## Labour 03 - Erymanthian Boar
+## [Labour 03 - Erymanthian Boar](03-erymanthian-boar)
 **Goal**  
 *This project aims to give you a small approach on timed commands and their execution.*
 
-## Labour 04 - Augean Stables
+## [Labour 04 - Augean Stables](04-augean-stables)
 **Goal**  
 *This project aims to help you get the basic notions of freeing memory.*
 
-## [Labour 05 - Stymphalian Birds](05-stymphalian-birds/README.md)
+## [Labour 05 - Stymphalian Birds](05-stymphalian-birds/)
 **Goal**  
 *This labour is made to make you more efficient when starting a new project by automating all of the repetitive settings you usually have to do.*
 
