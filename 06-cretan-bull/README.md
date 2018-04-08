@@ -1,4 +1,4 @@
-# Labour 05: Cretan Bull
+# Labour 06: Cretan Bull
 **Goal**  
 For this labour you have to create a champion that will enter the Corewar arena and be worthy of it!
 
