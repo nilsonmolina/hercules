@@ -28,16 +28,16 @@ I will put some information here
 *For this labour you have to create a champion that will enter the Corewar arena and be worthy of it!*
 
 ## Labour 07 - Mares of Diomedes 
-**_- Not Release yet_**
+**_- Not Released yet_**
 
 ## Labour 08 - Girdle of Hippolyta
-**_- Not Release yet_**
+**_- Not Released yet_**
 
 ## Labour 09 - Cattle of Geryon
-**_- Not Release yet_**
+**_- Not Released yet_**
 
 ## Labour 10 - Apples of Hesperides
-**_- Not Release yet_**
+**_- Not Released yet_**
 
 ## Labour 11 - Capturing Cerberus
-**_- Not Release yet_**
+**_- Not Released yet_**
