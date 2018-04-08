@@ -6,7 +6,7 @@ This project aims to help you get the basic notions of freeing memory.
 For this you just need to turn in the same program provided but with no memory leaks. You can change whatever you want in it except the lines that are malloc-ing and the program needs to be performing the exact same task with the same result. Using Valgrind and/or GDB or even without any of these tools you need to make sure that our program has no more memory leaks.
 
 ## **How to Test**   
-Unfortunately, valgrind is NOT currently supported on macOS High Sierra, so I had to create a Debian VM to properly run valgrind. For more information, on setting up the VM, please refer to my [notes](#VirtualBox-Debian-Install) in the following section.
+Unfortunately, valgrind is NOT currently supported on macOS High Sierra, so I had to create a Debian VM to properly run valgrind. For more information, on setting up the VM, please refer to my notes in the following section below.
 
 **Compile Program**
 ```

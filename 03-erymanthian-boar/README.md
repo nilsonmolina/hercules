@@ -1,11 +1,11 @@
 # Labour 03: Erymanthian Boar
+**Goal**  
+This project aims to give you a small approach on timed commands and their execution.
 
-Goal: This project aims to give you a small approach on timed commands and their execution.
+**Mandatory**  
+Write a small shell script that when you run it will execute it’s code on the upcoming 21st of December at 8:42am. The content of the script can be anything you want. Make sure your script confirms the creation of the timed task by showing the date and time of the execution.  
 
-> Write a small shell script that when you run it will execute it’s code on the upcoming 
-> 21st of December at 8:42am. The content of the script can be anything you want.
-> Make sure your script confirms the creation of the timed task by showing the date and time of the execution.  
-> *Note: cron is recurring, look for a command that is executed only once at a specified time.*
+**_*Note:_** *cron is recurring, look for a command that is executed only once at a specified time.*
 
 ## How To Run
 To run this script on a macOS system: 

@@ -20,7 +20,7 @@ You are going to have to create a champion and train them! It has to stay "live"
  - press `"spacebar"` to play/pause the battle.
  - press `"q"` to slow down by 10 cycles.
  - press `"w"` to slow down by 1 cycle.
- - press `"e"` to speed up by 1 cycles.
+ - press `"e"` to speed up by 1 cycle.
  - press `"r"` to speed up by 10 cycles.
 
 **Assemble Champion**
