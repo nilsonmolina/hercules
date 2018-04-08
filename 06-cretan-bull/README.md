@@ -17,9 +17,13 @@ You are going to have to create a champion and train them! It has to stay "live"
 ```
 ./corewar -n <CHAMPION-01.COR> <CHAMPION-02.COR>...
 ```
- - **_Note:_** *Can press the `q`, `w`, `e`, or `r` keys to change cycle speed. Press `spacebar` to pause and start the battle.*
+ - press `"spacebar"` to play/pause the battle.
+ - press `"q"` to slow down by 10 cycles.
+ - press `"w"` to slow down by 1 cycle.
+ - press `"e"` to speed up by 1 cycles.
+ - press `"r"` to speed up by 10 cycles.
 
-**Compile Champion**
+**Assemble Champion**
 ```
 ./asm <CHAMPION.S>
 ```
