@@ -1,8 +1,14 @@
 .name "maximus"
 .comment "Are you not entertained?!?!"
 
-l2:     sti r1, %:live, %1
-        and r1, %0, r1
+main:
+	sti r1, %:loop, %1
+	fork %:recruit
+	ld %0, r2
+	
+loop:	
+	live %13
+	zjmp %:loop
 
-live:   live %1
-        zjmp %:live
+recruit:
+	live %13
