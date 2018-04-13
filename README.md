@@ -1,6 +1,6 @@
 # Hercules
 ## Labour 00 - Nemean Lion
-**_- Did not participate_**
+<span style="color:red">**_- Did not participate_**</span>
 
 **Goal**  
 *This project aims to give you a brief overlook on Virtual Machines and ssh configurations and connections.*
@@ -17,7 +17,7 @@
 </details>    
 
 ## Labour 01 - Lernaean Hydra
-**_- Did not participate_**  
+<span style="color:red">**_- Did not participate_**</span>  
 
 **Goal**  
 *In this project, you will start learning a little bit more about sockets and starts getting a brief overlook at how the network works.*
@@ -102,11 +102,11 @@
 <details>
     <summary><strong>Mythology</strong></summary>
     <p>
-        
+        Minos, King of Crete, asked the God Poseidon for a sign from the sea. The sign was a bull that Minos thought was too beautiful to kill. Poseidon, having been promised the bull would be sacrificed in his honor was furious. If Minos loved the bull so much, poseidon figured he would make Minos’ wife fall in love too. Daedalus was a skilled problem solver and creator of amazing inventions. He was brought by Minos’ god-possessed wife the problem of seducing the bull. Confused at her motives at first he helped her succeed. Known to never turn down a problem, Daedalus is better known for enabling his son Icarus to fly to his death. Notably after being imprisoned for helping the King’s wife elope with impressive livestock. Hercules was sent to capture the bull by Eurystheus as his seventh labour. He sailed to Crete, where King Minos gave Hercules permission to take the bull away as it had been "wreaking havoc on Crete by uprooting crops and leveling orchard walls." (King Minos is too shy to talk about his real problems) Hercules captured the bull, and then shipped it to Eurystheus in Tiryns. The bull later broke loose and wandered into Marathon, becoming known as the "Maratho- nian Bull". That bull might be the same one, but it’s another story. You only have today!
     </p>
     <strong>Intro</strong>  
     <p>
-        Hercules wasn’t able to complete his Labour until he understood really how the hydra worked. Any true programmer must understand every ins and outs of things in order to subdue them. So for this project and in order to start subduing sockets, you have to build a server that to every ping would respond with two pong.
+        Hercules had to challenge and capture a mighty champion. Your task for this labour is to forge, train, and release a mighty champion.
     </p>
 </details>
 
@@ -118,11 +118,11 @@
 <details>
     <summary><strong>Mythology</strong></summary>
     <p>
-        
+        Eurystheus, always ready to send Heracles away again, sent him to steal the Mares of Thrace. Heracles was not aware that the mares had names, nor that they were kept tethered to a bronze manger because they were wild; Their madness being attributed to an unnatural diet of process threads and signals. Some versions say that they expelled fire when they breathed. Other versions talk about the awful stench of their mythical horse dung. They were computer-eating and uncontrollable, and Heracles left his best bro companion, Abderus, in charge of them while he fought Diomedes. When he returned he found out that his favorite guy was eaten. In revenge, Heracles fed Diomedes to his own horses, then founded the city of Abdera next to the boy’s tomb. In another version, Heracles stayed awake so that he didn’t have his throat cut by Diomedes in the night. He cut the chains binding the horses and scared the horses onto the high ground of a peninsula. Heracles quickly dug the land away from the ground with an axe to trap them on an island. When Diomedes arrived, Heracles killed him with the axe. The mares were only mad because they needed more processes to nom on. Heracles fed Diomedes to the mares to calm them until they could switch them to a diet of create core image signals. Both versions have eating make the mares calmer and easier to tame. Heracles captures them easily and takes them back to King Eurystheus, who dedicated the mares to Hera. In some versions, they were allowed to run free forever, having become permanently calm. In other versions Eurystheus ordered the horses taken to Olympus to be sacrificed to Zeus. Zeus refused them, and ran commands to interrupt and kill them.
     </p>
     <strong>Intro</strong>  
     <p>
-        Hercules wasn’t able to complete his Labour until he understood really how the hydra worked. Any true programmer must understand every ins and outs of things in order to subdue them. So for this project and in order to start subduing sockets, you have to build a server that to every ping would respond with two pong.
+        Hercules was told to steal some mares finding to find out quickly they were dangerous and wild! Releasing them required he act quickly to finish the labour and continue forth. Leaving chaos behind for follow-up stories.
     </p>
 </details>
 
