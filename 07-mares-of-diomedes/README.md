@@ -32,7 +32,6 @@ hexdump -C ./mares
 ```
 
 ## **Explanation provided by Paras Jha**
-
 By default, the program first attempts to trap certain signals (prevent their normal execution).
 
 It will then fork twice to create 4 main variants of forkbombs, each which has different functionality.
@@ -58,3 +57,6 @@ xanthos keeps trying to fork and run the system command "yes", probably closest 
 ![Markdown Logo](imgs/mares-paras05.png)
 
 The Last variant deinos is the one that creates a bunch of files on your system named "crap<val>.poo". Also appears to fork indefinitely
+
+Binary decompiled using:  
+https://www.hex-rays.com/products/ida/
