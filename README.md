@@ -128,7 +128,19 @@
 
 
 ## Labour 08 - Girdle of Hippolyta
-**_- Not Released yet_**
+**Goal**  
+*For this labour you write a program to send mail via SMTP.*
+
+<details>
+    <summary><strong>Mythology</strong></summary>
+    <p>
+        King Eurystheus, who is always ready to make his daughter happy, and send Heracles away again to die, commanded him to bring back the Girdle of Hippolyta... Heracules was not bothered by the task, he was prepared for anything. Well, maybe not to fight a whole army by himself. He emailed all of his friends to form an army to fight the Amazons. He also emailed Hippolyte, explaining the situation, asking for the girdle. Heracules checked his email. His bros and warriors alike responded quickly. He set off toward Queen Hippolyte and her tribe. Although the piece of armor was special, given to her because she was the best warrior among the Amazons, she sent a reply to Heracules, saying he could have it. This made Hera super angry, while she read their emails. The army arrived and it was too late. Although Hippolyta was ready to hand over the girdle, the angry godess Hera had given bad omen to Heracules arrival. Heracules stabbed Hippolyta and their armies fought! Returning to Eurystheus back in Mycenae, Heracules checked his email again. Seeing the message from Hippolyta, ignoring it. Then a quick ’reply all’ to his friends. The labour was done. This was just one of many versions of this labour, but in no version does Heracules do anything about killing Hippolyta..
+    </p>
+    <strong>Intro</strong>  
+    <p>
+        Heracules wasn’t about to fight that army alone. In this story we saw Heracules using SMTP to contact his army and Hippolyta. For this labour, let’s use SMTP to recreate these moments!
+    </p>
+</details>
 
 ## Labour 09 - Cattle of Geryon
 **_- Not Released yet_**
