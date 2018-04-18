@@ -32,7 +32,7 @@ $ ps
 ```
 **Get some data on binary**
 ```
-$ hexdump -C ./mares
+$ hexdump -C ./manger
 ```
 
 ## **Explanation provided by Paras Jha**
