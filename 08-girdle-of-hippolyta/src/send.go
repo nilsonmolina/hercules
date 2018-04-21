@@ -57,8 +57,6 @@ func send(e hercSMTP) {
 	} else {
 		fmt.Printf("smtp email was successfully sent to %v\n", e.email.To)
 	}
-	fmt.Println(e)
-
 }
 
 func makeTextMsg(e hercSMTP) string {
