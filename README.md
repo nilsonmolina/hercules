@@ -143,7 +143,19 @@
 </details>
 
 ## Labour 09 - Cattle of Geryon
-**_- Not Released yet_**
+**Goal**  
+*For this labour you will write a program like siege. The point of this program is to simulate placing a server "under siege."*
+
+<details>
+    <summary><strong>Mythology</strong></summary>
+    <p>
+        The Cattle of Geryon... You might be able to tell what is worse:   (1) Fighting countless monsters to steal some cattle, (2) Having to herd countless cattle while fighting monsters, or (3) Having countless cattle scattered, leaving you to chase them down. Heracules was not bothered by these tasks, he was in it for the long haul. But he certainly wan’t bothered by all the killing and fighting. It was having so many cattle, and having them scatter that made this labour hard. He spent a year chasing down each of the cattle, only to be stopped by a flood. Hera, always super angry at Heracules, sent the flood. She had also sent a gadfly to bite the cattle, making them scatter. This was annoying sure, but Heracules knew he could fix the problem. He piled stones into the river to make the water shallow. Redirecting and balancing the current of the river till the cattle could cross. Soon he arrived with the cattle in the court of Eurystheus, The cattle were sacrificed to none other than Hera. The labour was done...
+    </p>
+    <strong>Intro</strong>  
+    <p>
+        Heracules wasn’t thwarted by the flood! In this story we saw that although his path back to Eurystheus was blocked, Heracules repaired his route and finished his labour. For this labour, let’s recreate a program called siege, siege will be playing the part of Hera’s flood.
+    </p>
+</details>
 
 ## Labour 10 - Apples of Hesperides
 **_- Not Released yet_**

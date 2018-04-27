@@ -35,7 +35,7 @@ $ ps
 $ hexdump -C ./manger
 ```
 
-## **Explanation provided by Paras Jha**
+## **Explanation provided by [Paras Jha](http://github.com/jha)**
 By default, the program first attempts to trap certain signals (prevent their normal execution).
 
 It will then fork twice to create 4 main variants of forkbombs, each which has different functionality.

@@ -1,6 +1,6 @@
-# Labour 08: Girdle of Hippolyta
+# Labour 09: Cattle of Geryon
 **Goal**  
-For this labour you write a program to send mail via SMTP. Learn about how email works and and can be used in a program. You must use a langauge other than BASH.
+For this labour you will write a program like siege. Learn about how siege works and can be used to benchmark a server. The point of this program is to simulate placing a server "under siege." You can use any language.
 
 **Mandatory**  
 Send an email out to warriors to join your army! As mentioned before, write a program that uses SMTP to send email.
