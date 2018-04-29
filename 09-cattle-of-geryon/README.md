@@ -3,67 +3,34 @@
 For this labour you will write a program like siege. Learn about how siege works and can be used to benchmark a server. The point of this program is to simulate placing a server "under siege." You can use any language.
 
 **Mandatory**  
-Send an email out to warriors to join your army! As mentioned before, write a program that uses SMTP to send email.
+Release a great flood of simulated clients! As mentioned before, write a program like siege, Test HTTP load and benchmark how the server runs under different loads / attacks.
 
 ## **Commands to Run**   
+**Run Benchmark using Wizard**
+```
+$ python3 siege.py
+```
+**Run Benchmark using Flags**
+```
+$ python3 siege.py -u http://google.com -c 100 -r 10
+```
+**Note:**
+- **-u:** *url to benchmark*   
+    *(default: http://23.23.42.188)*
+- **-c:** *number of clients/threads to use*  
+    *(default: 100)*
+- **-r:** *number of requests per client*  
+    *(default: 5)*  
 
-**Send email using Wizard**
-```
-$ ./herc-mail
-```
-**Send email using defaults**
-```
-$ ./herc-mail -to 42.nmolina@gmail.com
-```
-**Send an HTML Email - _(open email using mail app)_**
-```
-$ ./herc-mail -html true -to 42.nmolina@gmail.com
-```
-**Receive email**
-```
-$ ./herc-mail -get
-```
 **Usage**
 ```
-Usage:	./herc-mail <OPTIONS>
+usage: siege.py [-h] [-u url] [-c clients] [-r requests]
 
-Herc-Mail is a basic SMTP email client. All emails will be sent
-from '42.nmolina@gmail.com' for the purposes of this project.
-        
-Options:
--to     Change recipient 
-            (Default: "42-hercules@mailinator.com")
--body   Change email body 
-            (Default: "This email was sent using herc-mail.")
--sub    Change email subject 
-            (Default: "Hello From Herc-Mail")
--help   Show usage information
-			(No Input)
+Simple http load tester and benchmarking utility
 
-*Experimental:
--html   Send email with HTML/CSS styling (allowed: true/false)
-            (Default: false)
--get	Receive email using IMAP (MUST BE FIRST OPTION)
-            (No Input) - gets latest email from 42.nmolina@gmail.com
+optional arguments:
+  -h, --help   show this help message and exit
+  -u url       url/website benchmark will be used on
+  -c clients   number of clients/threads
+  -r requests  number of requests per clients
 ```
-
-## SMTP
-SMTP(Simple Mail Transfer Protocol) is the standard for passing email messages from one mail server to another. 
-There are two ports you’ll need to be aware of for SMTP:
-
-- **Port 25:** This is the default SMTP port. It is not encrypted.
-- **Port 465 / 587:** The default port for using SMTP through SSL.
-
-An SMTP server understands very simple text commands like EHLO, MAIL, RCPT and DATA. The most common commands are:
-
-- **HELO** - introduce yourself
-- **EHLO** - introduce yourself and request extended mode  
-- **MAIL FROM:** - specify the sender  
-- **RCPT TO:** - specify the recipient  
-- **DATA** - specify the body of the message (To, From and Subject should be the first three lines.)
-- **RSET** - reset
-- **QUIT** - quit the session
-- **HELP** - get help on commands
-- **VRFY** - verify an address
-- **EXPN** - expand an address
-- **VERB** - verbose
