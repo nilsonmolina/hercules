@@ -7,9 +7,30 @@ Generate a way to access your virtual machine without a password. If you use a p
 > Do not ever give your private key to anyone, it’s private for god sake!
 
 ## **Commands to Run**   
-**Nothing here yet... Stay posted**
+**Command to run for first time**
 ```bash
-$ 
+$ ./apples.sh hercules localhost 1313 -k -r
+```
+
+**Command to run once RSA key is set on remote**
+```bash
+$ ./apples.sh hercules localhost 1313
+```
+
+**Usage**
+```
+usage: sh ./apples.sh <user> <ip> <port> <flags>
+
+FLAGS:
+ -k     generate key
+ -r     create git repo
+
+EXAMPLE:
+ - user: hercules
+ - ip:   localhost
+ - port: 1313
+
+WARNING: If invalid RSA Key provided, standard password will be used.
 ```
 
 ## **Enable `ssh` in Virtualbox**
@@ -101,16 +122,17 @@ First things first, let us create our RSA key.
 
 1. Copy the public key to the VM. (Might have to change network adapter, see troubleshooting below)
     ```bash
-    ssh-copy-id hercules@10.113.100.139
+    # If NAT network
+    ssh-copy-id -p 1313 hercules@localhost  
     ```
 1. And now you can ssh into the VM.
     ```bash
-    ssh hercules@10.113.100.139
+    ssh hercules@localhost
     ```
 
 ### Troubleshooting
-**If you have an issue copying the public key to the VM, you need to change your network adapter from NAT to Bridged.**
-1. Change the network adapter to Bridged:
+**If you changed your network adapter from NAT to Bridged. Things are different**
+1. You can check if your network adapter is set to Bridged:
 `Settings -> Network -> Adapter 1 -> Attached to: -> Bridged`.
 1. Get the IP Address of the machine:
     ```bash
@@ -136,5 +158,8 @@ First things first, let us create our RSA key.
 
 **If you have an issue with the key not being found, then you probably gave it a name and did not take the default.  Simply include it in your calls.**
 ```bash
-$ ssh-copy-id -i ~/.ssh/hercules hercules@10.113.100.139
+# Copy RSA Key
+$ ssh-copy-id -i ~/.ssh/<name-of-key> hercules@localhost
+# Connect using SSH and RSA Key
+$ ssh -i ~/.ssh/<name-of-key> hercules@localhost
 ```

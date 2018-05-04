@@ -127,7 +127,7 @@
 </details>
 
 
-## Labour 08 - Girdle of Hippolyta
+## [Labour 08 - Girdle of Hippolyta](08-girdle-of-hippolyta/)
 **Goal**  
 *For this labour you write a program to send mail via SMTP.*
 
@@ -142,7 +142,7 @@
     </p>
 </details>
 
-## Labour 09 - Cattle of Geryon
+## [Labour 09 - Cattle of Geryon](09-cattle-of-geryon)
 **Goal**  
 *For this labour you will write a program like siege. The point of this program is to simulate placing a server "under siege."*
 
@@ -157,7 +157,7 @@
     </p>
 </details>
 
-## Labour 10 - Apples of Hesperides
+## [Labour 10 - Apples of Hesperides](10-apples-of-hesperides)
 **Goal**  
 *Learn about ssh and RSA to connect to your virtual machine without a password.*
 
