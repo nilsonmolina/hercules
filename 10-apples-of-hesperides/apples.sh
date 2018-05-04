@@ -11,10 +11,10 @@ while true; do
     [Yy]* )
             # Generate SSH Key | -t Type | -f Filename | -q Silence | -N New Password
             clear; echo "\n ------------ Generating RSA Key -----------"
-            ssh-keygen -t rsa -f ~/.ssh/id_rsa -q -N "" && echo "\n -- RSA key created!"
+            ssh-keygen -t rsa -f ~/.ssh/hercules_key -q -N "" && echo "\n -- RSA key created!"
             # Copy Public Key
             echo "\n ---------- Copying RSA Key to VM ----------\n    (Password is required only this one time)\n"
-            ssh-copy-id -i ~/.ssh/id_rsa -p $3 $1@$2
+            ssh-copy-id -i ~/.ssh/hercules_key -p $3 $1@$2
             break;;
     [Nn]* ) 
             break;;
