@@ -25,5 +25,5 @@ done
 
 # Connect to VM using ssh and RSA Key & Create Bonus Repo
 echo "\n ----- Connecting & Creating Bonus Repo -----";
-ssh -p $3 $1@$2 "mkdir ~/bonus && git init ~/bonus"
-ssh -p $3 $1@$2
+ssh -i ~/.ssh/hercules_key -p $3 $1@$2 "mkdir ~/bonus && git init ~/bonus"
+ssh -i ~/.ssh/hercules_key -p $3 $1@$2
