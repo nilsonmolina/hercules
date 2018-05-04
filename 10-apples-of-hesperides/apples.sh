@@ -1,29 +1,23 @@
 # Show usage method
-if [ "$#" -ne 3 ] ; then
-    echo "usage: sh $0 <user> <ip> <port>"
-    echo "\nEXAMPLE: \n - user: hercules\n - ip:   localhost\n - port: 1313"
+if [ "$#" -lt 3 ] ; then
+    echo "usage: sh $0 <user> <ip> <port> <flags>"
+    echo "\nEXAMPLE: \n - user: hercules\n - ip:   localhost\n - port: 1313\n\nFLAGS:\n  -k   generate key\n  -r   create git repo\n"
     exit 1
 fi
-# Prompt to create key
-while true; do
-    read -p "Do you want to generate an RSA key? (y/n)  " yn
-    case $yn in 
-    [Yy]* )
-            # Generate SSH Key | -t Type | -f Filename | -q Silence | -N New Password
-            clear; echo "\n ------------ Generating RSA Key -----------"
-            ssh-keygen -t rsa -f ~/.ssh/hercules_key -q -N "" && echo "\n -- RSA key created!"
-            # Copy Public Key
-            echo "\n ---------- Copying RSA Key to VM ----------\n    (Password is required only this one time)\n"
-            ssh-copy-id -i ~/.ssh/hercules_key -p $3 $1@$2
-            break;;
-    [Nn]* ) 
-            break;;
-    *) 
-            echo "Please enter yes or no.\n";;
-    esac
-done
-
-# Connect to VM using ssh and RSA Key & Create Bonus Repo
-echo "\n ----- Connecting & Creating Bonus Repo -----";
-ssh -i ~/.ssh/hercules_key -p $3 $1@$2 "mkdir ~/bonus && git init ~/bonus"
+# Generate and Copy SSH Key
+if [ "$4" == "-k" ] || [ "$5" == "-k" ] ; then
+    clear; echo "\n ------------ Generating RSA Key -----------"
+    # Generate SSH Key | -t Type | -f Filename | -q Silence | -N New Password    
+    ssh-keygen -t rsa -f ~/.ssh/hercules_key -q -N "" && echo "\n -- RSA key created!"
+    echo "\n ---------- Copying RSA Key to VM ----------\n    (Password is required only this one time)\n"
+    # Copy Public Key    
+    ssh-copy-id -i ~/.ssh/hercules_key -p $3 $1@$2
+fi
+# Connect to VM using ssh and RSA Key & Create Bonus Git Repo
+if [ "$4" = "-r" ] || [ "$5" = "-r" ] ; then
+    echo "\n ----- Creating Bonus Repo -----";
+    ssh -i ~/.ssh/hercules_key -p $3 $1@$2 "mkdir ~/bonus && git init ~/bonus"
+fi
+# Connect to VM using ssh and RSA Key
+echo "\n ----- Connecting via SSH w/ RSA -----";
 ssh -i ~/.ssh/hercules_key -p $3 $1@$2
