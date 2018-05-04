@@ -158,7 +158,19 @@
 </details>
 
 ## Labour 10 - Apples of Hesperides
-**_- Not Released yet_**
+**Goal**  
+*Learn about ssh and RSA to connect to your virtual machine without a password.*
+
+<details>
+    <summary><strong>Mythology</strong></summary>
+    <p>
+        The Apples of Hesperides... King Eurystheus didn’t stop after the last labor, he demanded two more! The hydra and stables did not count... because reasons. What must hercules do now? Bring to him, the Apples of Hesperides, fruit of the gods. But where? But why? Tricks and secrets, doing the impossible. Perfectly easy for Hercules. Surely after countless fights, murders and sacrifice (human and so forth) the journey would be over. As soon as he has the apples, he must return them, they are the god’s apples after all. If this doesn’t work, what will Eurystheus do to send Hercules to his death? Stay turned!
+    </p>
+    <strong>Intro</strong>  
+    <p>
+        Hercules couldn’t find the garden of the gods, When he did find it, he had to play tricks to get the apples Learn a trick for gaining access to your virtual machine. Without a password. The gods will surely know you are mortal if you use one. Prove that you can access the machine, and turn in how.
+    </p>
+</details>
 
 ## Labour 11 - Capturing Cerberus
 **_- Not Released yet_**
