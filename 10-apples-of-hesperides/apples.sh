@@ -1,12 +1,13 @@
 # Show usage method
 if [ "$#" -lt 3 ] ; then
-    echo "usage: sh $0 <user> <ip> <port> <flags>"
-    echo "\nFLAGS:\n -k     generate key\n -r     create git repo\n\nEXAMPLE: \n - user: hercules\n - ip:   localhost\n - port: 1313\n"
+    echo "usage: sh $0 <user> <ip> <port> <flags>\n"
+    echo "FLAGS:\n -k     generate key\n -r     create git repo\n"
+    echo "EXAMPLE: \n - user: hercules\n - ip:   localhost\n - port: 1313\n"
     echo "WARNING: If invalid RSA Key provided, standard password will be used.\n"    
     exit 1
 fi
 # Generate and Copy SSH Key
-if [ "$4" == "-k" ] || [ "$5" == "-k" ] ; then
+if [ "$4" = "-k" ] || [ "$5" = "-k" ] ; then
     clear; echo "\n ------------ Generating RSA Key -----------"
     # Generate SSH Key | -t Type | -f Filename | -q Silence | -N New Password    
     ssh-keygen -t rsa -f ~/.ssh/hercules_key -q -N "" && echo "\n -- RSA key created!"
