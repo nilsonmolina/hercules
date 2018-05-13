@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <unistd.h>
+#include <string.h>
 #include <stdint.h>
 #include <stdlib.h>
 #include <sys/socket.h>
@@ -29,7 +31,7 @@ create_server_fd(void)
 
     /* Bind to an address to service requests */
     addr.sin_family = AF_INET;
-    addr.sin_addr.s_addr = INADDR_ANY;
+    addr.sin_addr.s_addr = BIND_ADDR;
     addr.sin_port = htons(BIND_PORT);
     if (bind(fd, (struct sockaddr *)&addr, sizeof (addr)) == -1) {
         printf("Error calling bind(): %s\n", strerror(errno));
@@ -120,10 +122,10 @@ handle_client_conn_req(int fd, uint32_t *addr, uint16_t *port)
         printf("We only support IPv4\n");
         return 0;
     }
-    *addr = *((uint32_t *)buff[4]);
+    *addr = *((uint32_t *)&buff[4]);
     /* You might also want to support domain name resolution but LZ */
 
-    *port = *((uint16_t *)buff[8]);
+    *port = *((uint16_t *)&buff[8]);
 
     return 0;
 }
@@ -188,7 +190,7 @@ proxy_traffic(int fd, uint32_t addr, uint16_t port)
 }
 
 static void
-handle_client(int fd, const struct sockaddr_in *addr)
+handle_client(int fd, const struct sockaddr_in *addr_client)
 {
     uint32_t addr;
     uint16_t port;

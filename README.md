@@ -1,4 +1,7 @@
 # Hercules
+
+![Labors Image](labors.jpg)
+
 ## Labour 00 - Nemean Lion
 <span style="color:red">**_- Did not participate_**</span>
 
@@ -174,3 +177,17 @@
 
 ## Labour 11 - Capturing Cerberus
 **_- Not Released yet_**
+
+**Goal**  
+*Program a proxy for Hercules! Learn about proxies. Use your C programming skills, and what you learn to recreate one.*
+
+<details>
+    <summary><strong>Mythology</strong></summary>
+    <p>
+        The Capture of Cerberus... King Eurystheus gave Hercules his final labour. From the underworld, capture and bring to him Cerberus, the indescribable horror guard- ing the underworld from the living. Often imagined as a three headed canine-beast, the creature was covered in the heads of snakes, and it’s heads could hardly be described as any one creature. It was a horror and sibling of the lernaean hydra, the neamean lion and the beast that had guarded the cattle of geryon. Hard to say if this was beacuse King Eurystheus was only knowledgeable of one family of nasty beasts or if they really were the worst. But what did hercules do? First he asked Hades: "Can I take your nasty creature out there?" Hades allowed it, only if he did it without iron. Hercules was obviously underestimated and made ease of the job. Using the same raw power he used to kill the rest of the nasties and the skin of the lion as a shield he fought and made the beast submit. Then he showed Cerberus to King Eurystheus... King Eurystheus was very afraid of the beast! He demanded that Hercules return it to Hades. In return he freed Hercules from any further labours. It isn’t clear what Hercules wanted to do after being free of the labours. Some stories tells us he joined Jason and the Arogonauts in their quest for the golden fleece. A separate story says he got a real job. An animated movie would tell you he got in with the others at mount olympus. So concludes the Labours of Hercules. But it’s not over till it’s over...
+    </p>
+    <strong>Intro</strong>  
+    <p>
+        The gods are on to your trickery! It isn’t Hercules that has been doing these labours, it’s you! If only we could solve this problem...
+    </p>
+</details>
