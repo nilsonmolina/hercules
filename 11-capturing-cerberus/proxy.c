@@ -6,7 +6,7 @@
 /*   By: nmolina <nmolina@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/12 00:39:59 by nmolina           #+#    #+#             */
-/*   Updated: 2018/05/12 20:41:18 by nmolina          ###   ########.fr       */
+/*   Updated: 2018/05/17 10:27:10 by nmolina          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,8 +126,15 @@ static int	handle_client_conn_req(int c_sfd, uint32_t *addr, uint16_t *port)
 
 static int	proxy_traffic(int c_sfd, uint32_t addr, uint16_t port)
 {
-	struct sockaddr_in saddr;
-	int s_sfd;
+	struct	sockaddr_in saddr;
+	int 	s_sfd;
+	static const char connected[] = { 
+		SOCKS5_VERSION, 
+		0x00, 
+		0x00, 
+		0x01, 
+		0x00,0x00,0x00,0x00, 
+		0x00, 0x00 };
 
 	printf("- socket\n");	
 	if ((s_sfd = socket(AF_INET, SOCK_STREAM, 0)) == -1) {
@@ -144,6 +151,9 @@ static int	proxy_traffic(int c_sfd, uint32_t addr, uint16_t port)
 		close(s_sfd);
 		return 0;
 	}
+	printf("We're connected to the remote side port %d!\n", ntohs(port));
+	send(c_sfd, connected, sizeof(connected), 0);
+	
 
 	/* Make the socket nonblocking so we can read from both in and out
 	 * fds at the same time without blocking */
@@ -158,35 +168,35 @@ static int	proxy_traffic(int c_sfd, uint32_t addr, uint16_t port)
 		 * EAGAIN or EWOULDBLOCK it just means that there was no data
 		 * to read at this time, and we should move on to trying to read
 		 * from the server */	
-		len = recv(c_sfd, buff, sizeof (buff), 0);
-		printf(" - reading from client - len: %d\n", len);				
-		if (len == -1) {
+		len = recv(c_sfd, buff, sizeof(buff), 0);
+		//printf(" - reading from client - len: %d | c_sfd: %d\n", len, c_sfd);				
+		if (len < 1) {
 			if (errno != EAGAIN && errno != EWOULDBLOCK) {
 				printf("Error reading from client: %s\n", strerror(errno));
 				close(s_sfd);
 				return 0;
 			}
 		} else {
-			printf(" - Sending to server\n");
+			printf(" - sending to server - len: %d | c_sfd: %d\n", len, c_sfd);
 			send(s_sfd, buff, len, 0);
 		}
 
-		printf(" - reading from server\n");
+		// printf(" - reading from server\n");
 		/* Read traffic from the server. IF there was data to read then
 		 * len would be greater than 0 etc etc etc */
-		len = recv(s_sfd, buff, sizeof (buff), 0);
-		printf(" - reading from server - len: %d\n", len);		
-		if (len == -1) {
+		len = recv(s_sfd, buff, sizeof(buff), 0);
+		//printf(" - reading from server - len: %d | s_sfd: %d\n", len, s_sfd);	
+		if (len < 1) {
 			if (errno != EAGAIN && errno != EWOULDBLOCK) {
 				printf("Error reading from server: %s\n", strerror(errno));
 				close(s_sfd);
 				return 0;
 			}
 		} else {
-			printf(" - Sending to client\n");
+			printf(" - sending to client - len: %d | s_sfd: %d\n", len, s_sfd);
 			send(c_sfd, buff, len, 0);
 		}
-		usleep(1000);
+		usleep(100);
 	}
 	return (0);
 }
