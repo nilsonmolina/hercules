@@ -1,0 +1,102 @@
+
+STARTING LOAD TEST
+URL:        http://23.23.42.188:3000/api/parts/300
+Clients:    20
+Requests:   50
+
+----------- Running Benchmark -----------
+
+Transactions:               1000 hits
+Availability:               100.0 %
+Successful transactions:    1000
+Failed transactions:        0
+Elapsed time:               10.755 secs
+Average response time:      0.21 secs
+Totaled response times:     209.69 secs
+Data transfered:            163.086 KB
+
+
+STARTING LOAD TEST
+URL:        http://23.23.42.188:3000/api/parts/3000
+Clients:    20
+Requests:   50
+
+----------- Running Benchmark -----------
+
+Transactions:               1000 hits
+Availability:               100.0 %
+Successful transactions:    1000
+Failed transactions:        0
+Elapsed time:               10.782 secs
+Average response time:      0.209 secs
+Totaled response times:     209.287 secs
+Data transfered:            166.992 KB
+
+
+STARTING LOAD TEST
+URL:        http://23.23.42.188:3000/api/parts/30
+Clients:    20
+Requests:   50
+
+----------- Running Benchmark -----------
+
+Transactions:               1000 hits
+Availability:               100.0 %
+Successful transactions:    1000
+Failed transactions:        0
+Elapsed time:               10.902 secs
+Average response time:      0.21 secs
+Totaled response times:     209.741 secs
+Data transfered:            157.227 KB
+
+
+STARTING LOAD TEST
+URL:        http://23.23.42.188:3000/api/parts/3
+Clients:    20
+Requests:   50
+
+----------- Running Benchmark -----------
+
+Transactions:               1000 hits
+Availability:               100.0 %
+Successful transactions:    1000
+Failed transactions:        0
+Elapsed time:               11.13 secs
+Average response time:      0.21 secs
+Totaled response times:     209.5 secs
+Data transfered:            155.273 KB
+
+
+STARTING LOAD TEST
+URL:        http://23.23.42.188:3000/api/parts/300000
+Clients:    20
+Requests:   50
+
+----------- Running Benchmark -----------
+
+Transactions:               1000 hits
+Availability:               100.0 %
+Successful transactions:    1000
+Failed transactions:        0
+Elapsed time:               11.153 secs
+Average response time:      0.211 secs
+Totaled response times:     211.192 secs
+Data transfered:            170.898 KB
+
+
+STARTING LOAD TEST
+URL:        http://23.23.42.188:3000/api/parts/30000
+Clients:    20
+Requests:   50
+
+----------- Running Benchmark -----------
+
+Transactions:               1000 hits
+Availability:               100.0 %
+Successful transactions:    1000
+Failed transactions:        0
+Elapsed time:               11.331 secs
+Average response time:      0.21 secs
+Totaled response times:     210.074 secs
+Data transfered:            163.086 KB
+
